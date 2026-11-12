@@ -16,7 +16,7 @@ public class loginStep {
 
     //LOGIN EXITOSO CON CREDENCIALES VALIDAS
 
-    @Given("estoy en la pagina de login de SauceDemo")
+    @Given("estoy en la pagina/página de login de SauceDemo")
     public void estoyenlapaginadelogin(){
 
         loginPage = new LoginPage(Hooks.driver);
@@ -37,7 +37,7 @@ public class loginStep {
         System.out.println("Ingrese la contraseña");
     }
 
-    @And("hago click en el boton Login")
+    @And("hago click en el boton/botón Login")
     public void HagoClickenLogin(){
         loginPage.clickLogin();
         System.out.println("HICE CLICK EN LOGIN");

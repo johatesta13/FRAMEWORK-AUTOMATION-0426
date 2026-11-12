@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CartPage extends BasePage{
@@ -42,6 +43,15 @@ public class CartPage extends BasePage{
     public int GetitemCount(){
         List<WebElement>items = driver.findElements(cart_items);
         return items.size();
+    }
+
+    //METODO PARA OBTENER LOS NOMBRES DE LOS ITEMS DEL CARRITO
+    public List<String> getItemNames(){
+        List<String> nombres = new ArrayList<>();
+        for(WebElement item : driver.findElements(itemName)){
+            nombres.add(item.getText());
+        }
+        return nombres;
     }
 
     public boolean isCartEmpty(){

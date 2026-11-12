@@ -18,7 +18,7 @@ import org.testng.annotations.DataProvider;
         },
 
         monochrome = false,
-        tags = "@johatest"
+        tags = "@compra-completa"
 )
 
 

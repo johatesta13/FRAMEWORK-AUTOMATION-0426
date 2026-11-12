@@ -48,6 +48,14 @@ public class InventoryPage extends BasePage{
         click(addTshirtBtn);
         return this;
     }
+
+    //Agrega cualquier producto por su nombre visible
+    //"Sauce Labs Backpack" -> id "add-to-cart-sauce-labs-backpack"
+    public InventoryPage agregarProducto(String nombreProducto){
+        String id = "add-to-cart-" + nombreProducto.toLowerCase().trim().replace(" ", "-");
+        click(By.id(id));
+        return this;
+    }
     //Redireccion hacia otras partes del flujo
 
     public CartPage goToCart(){
